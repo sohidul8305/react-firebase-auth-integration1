@@ -1,5 +1,7 @@
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
 import { Link } from 'react-router';
+import { auth } from '../../../firebase/sirebase.init';
 
 const Register = () => {
         const handleregister  = (event)  =>{
@@ -7,6 +9,14 @@ const Register = () => {
         const email  = event.target.email.value;
         const password  = event.target.password.value;
         console.log(email, password)
+
+        createUserWithEmailAndPassword(auth, email, password)
+        .then(result =>{
+          console.log(result)
+        })
+        .catch(error =>{
+          console.log(error)
+        })
     }
     return (
     <div className="card bg-base-100 mx-auto top-8 w-full max-w-sm shrink-0 shadow-2xl">
