@@ -15,7 +15,7 @@ const Register = () => {
        <form onSubmit={handleregister}>
            <fieldset className="fieldset">
           <label className="label">Name</label>
-          <input type="text" name="email" className="input" placeholder=" Inter Your Name" />
+          <input type="text" name="name" className="input" placeholder=" Inter Your Name" />
           <label className="label">Email</label>
           <input type="email" name="email" className="input" placeholder=" Inter Your Email" />
           <label className="label">Password</label>
